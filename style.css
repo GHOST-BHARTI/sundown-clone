@@ -178,6 +178,9 @@ html, body {
     margin-top: 4vw;
     position: relative;
 }
+#error{
+    height: 0px;
+}
 #page2 {
     padding: 8vw 0;
     min-height: 100vh;
