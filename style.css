@@ -103,9 +103,12 @@ html, body {
     padding-bottom: 3.7vw;
 }
 #gooey-hero-div{
-    height: 100px;
-    width: 100px;
+    height: 90vw;
+    width: 55vw;
     overflow: hidden;
+    position: absolute;
+    right: 0%;
+    top:35%;
     /* background-color: yellow; */
 }
 #gooey-hero{
@@ -115,8 +118,9 @@ html, body {
     border-radius: 50%;
     filter: blur(10px);
     position: absolute;
-    top:37.5%;
-    right: 5%;
+    /* z-index: 10; */
+    top:5%;
+    right: 10%;
     animation-name: gooey-hero;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
@@ -139,27 +143,28 @@ html, body {
     width: 50vw;
     background:#fe320a;
     border-radius: 50%;
-    /* filter: blur(10px); */
-    top:38%;
-    right: -18%;
-    z-index: 10;
+    position: absolute;
+    filter: blur(10px);
+    top: 8%;
+    right: -40%;
+    /* z-index: 10; */
     animation-name: gooey-hero1;
-    animation-duration: 5s;
+    animation-duration: 3.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     
 }
-/* @keyframes gooey-hero1{
+@keyframes gooey-hero1{
     from{
-        transform: translate(0%);
-        filter: blur(15px);
-    }
-    to{
-        transform: translate-(5%);
+        transform: translate(-20% , -10% ) skew(2deg);
         filter: blur(20px);
     }
-} */
+    to{
+        transform: translate(20%,-8%) skew(10deg);
+        filter: blur(25px);
+    }
+}
 #left h3{
     width: 25vw;
     font-size: 1.8vw;
@@ -240,6 +245,9 @@ html, body {
     line-height: 4vw;
     position: relative;
     z-index: 9;
+}
+#short-display{
+    display: none;
 }
 #bottom-part2{
     width: 20%;
@@ -737,15 +745,78 @@ html.lenis, html.lenis body {
         flex-direction: column-reverse;
     }
     #left h3{
-        width: 80%;
-        font-size: 5.5vw;
-        line-height: 6vw;
+        width: 75%;
+        font-size: 4.6vw;
+        line-height: 4.4vw;
     }
     #centre h1{
         font-size: 15vw;
         line-height: 13vw;
         text-align: right;
         font-weight:50;
+    }
+    #gooey-hero-div{
+        height: 90vw;
+        width: 55vw;
+        overflow: hidden;
+        position: absolute;
+        right: 0%;
+        top:38%;
+        /* background-color: yellow; */
+    }
+    #gooey-hero{
+        height:35vw;
+        width: 40vw;
+        background:#fe320a;
+        border-radius: 50%;
+        filter: blur(10px);
+        position: absolute;
+        /* z-index: 10; */
+        top:15%;
+        right: 10%;
+        animation-name: gooey-hero;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        
+    }
+    @keyframes gooey-hero{
+        from{
+            transform: translate(10%,-5%);
+            filter: blur(15px);
+        }
+        to{
+            transform: translate(-10%,5%);
+            filter: blur(20px);
+        }
+    }
+    #gooey-hero1{
+        height:50vw;
+        width: 50vw;
+        background:#fe320a;
+        border-radius: 50%;
+        position: absolute;
+        filter: blur(10px);
+        top: 18%;
+        right: -40%;
+        /* z-index: 10; */
+        animation-name: gooey-hero1;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        
+    }
+    @keyframes gooey-hero1{
+        from{
+            transform: translate(-20% , -10% ) skew(2deg);
+            filter: blur(20px);
+        }
+        to{
+            transform: translate(20%,-8%) skew(10deg);
+            filter: blur(25px);
+        }
     }
     #page1 video{
         width: 100%;
@@ -794,22 +865,27 @@ html.lenis, html.lenis body {
         margin: 2vw 2vw;
     }
     #page2-bottom{
-        height: 90vh;
+        height: 78vh;
         width: 100%;
         padding:10vw 4vw;
         display: flex;
         flex-direction: column;
         align-items:flex-start;
-        justify-content: space-between;
         position: relative;
         z-index: 9;
     
     }
     #page2-bottom h1{
-        font-size: 7.5vw;
+        font-size: 7vw;
         width: 100%;
         line-height: 7vw;
         font-weight: 90;
+    }
+    #short-display{
+        display: block;
+    }
+    #wide-display{
+        display: none;
     }
     #bottom-part2{
         width: 70%;
@@ -851,7 +927,7 @@ html.lenis, html.lenis body {
         position: relative;
     }
     .elem{
-        height: 125px;
+        height: 60px;
         width: 100%;
         border-bottom:none;
         position: relative;
@@ -862,7 +938,7 @@ html.lenis, html.lenis body {
         z-index: 9;
     }
     .elem h2{
-        font-size: 3vw;
+        font-size: 4vw;
         position: relative;
     }
     .elem .overlay {
@@ -878,8 +954,8 @@ html.lenis, html.lenis body {
         top:0;
     }
     #fixed-image{
-        height: 30vw;
-        width: 24vw;
+        height: 80vw;
+        width: 50vw;
         border-radius: 10px;
         position: fixed;
         z-index: 99;
@@ -1051,6 +1127,106 @@ html.lenis, html.lenis body {
         height: 100vh;
         width: 100vw;
     }
+    #gooey2{
+        height: 60vw;
+        width: 60vw;
+        position: absolute;
+        border-radius:50%;
+        background: linear-gradient(to top right,#ff2d03,#ff5c0b);
+        top:-10%;
+        left:-19%;
+        filter: blur(5px);
+        animation-name: gooey2;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes gooey2{
+        from{
+            transform: translate(10%,-10%) skew(5deg);
+            filter: blur(15px);
+        }
+        to{
+            transform: translate(-10%,10%) skew(-5deg);
+            filter: blur(20px);
+        }
+    }
+    #gooey3{
+        height: 60vw;
+        width: 60vw;
+        position: absolute;
+        border-radius:50%;
+        background: linear-gradient(to top right,#ff2d03,#ff5c0b);
+        top:-10%;
+        right:-19%;
+        filter: blur(20px);
+        animation-name: gooey3;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes gooey3{
+        from{
+            transform: translate(-10%,10%) skew(-5deg);
+            filter: blur(15px);
+        }
+        to{
+            transform: translate(10%,-10%) skew(5deg);
+            filter: blur(20px);
+        }
+    }
+    #gooey4{
+        height: 40vw;
+        width: 60vw;
+        position: absolute;
+        border-radius:50%;
+        background: linear-gradient(to top right,#ff2d03,#ff5c0b);
+        top:-8%;
+        right:20%;
+        filter: blur(20px);
+        animation-name: gooey4;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes gooey4{
+        from{
+            transform: translate(5%,10%);
+            filter: blur(15px);
+        }
+        to{
+            transform: translate(-10%,10%);
+            filter: blur(20px);
+        }
+    }
+    #gooey5{
+        height: 40vw;
+        width: 50vw;
+        position: absolute;
+        border-radius:50%;
+        background: linear-gradient(to top right,#ff2d03,#ff5c0b);
+        top:-5%;
+        right:0%;
+        filter: blur(0px);
+        animation-name: gooey5;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes gooey5{
+        from{
+            transform: translate(10%,-10%) skew(5deg);
+            filter: blur(15px);
+        }
+        to{
+            transform: translate(-10%,10%) skew(-12deg);
+            filter: blur(20px);
+        }
+    }    
     #footer-div{
         display: flex;
         flex-direction: column;
@@ -1061,6 +1237,7 @@ html.lenis, html.lenis body {
     #footer-left h2{
         font-size: 28px;
         line-height:35px;
+        z-index: 1;
     }
     #footer-right h2{
         padding-left: 17px;
